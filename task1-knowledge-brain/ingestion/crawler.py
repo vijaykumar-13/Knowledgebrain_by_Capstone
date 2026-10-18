@@ -13,9 +13,9 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 
-# --------------------------------------------------
-# Configuration
-# --------------------------------------------------
+# ==================================================
+# CONFIGURATION
+# ==================================================
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 
@@ -25,9 +25,9 @@ SITEMAP_URL = (
     "https://support.brilliantdirectories.com/support/sitemap.xml"
 )
 
-# Resolve relative DATABASE_PATH values against the
-# task1-knowledge-brain directory, just like app/main.py.
+# Use the same database path resolution as app/main.py.
 db_setting = Path(os.getenv("DATABASE_PATH", "knowledge.db"))
+
 DB_PATH = (
     db_setting
     if db_setting.is_absolute()
@@ -41,12 +41,18 @@ MAX_ARTICLES = 20
 RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
 
 
-# --------------------------------------------------
-# Database
-# --------------------------------------------------
+# ==================================================
+# DATABASE INITIALIZATION
+# ==================================================
 
 def initialize_database():
-    """Create the article and ingestion-tracking tables."""
+    """Create database tables and print diagnostic information."""
+
+    print("=" * 60)
+    print("CRAWLER DATABASE DIAGNOSTICS")
+    print(f"Project directory: {BASE_DIR}")
+    print(f"Crawler database path: {DB_PATH.resolve()}")
+
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     with sqlite3.connect(DB_PATH) as conn:
@@ -77,7 +83,6 @@ def initialize_database():
             """
         )
 
-    print(f"Database path: {DB_PATH}")
     print(f"Database exists: {DB_PATH.exists()}")
 
     with sqlite3.connect(DB_PATH) as conn:
@@ -92,9 +97,22 @@ def initialize_database():
 
         print("Database tables:", [row[0] for row in tables])
 
+        article_count = conn.execute(
+            "SELECT COUNT(*) FROM articles"
+        ).fetchone()[0]
+
+        print(f"Existing article count: {article_count}")
+
+    print("=" * 60)
+
+
+# ==================================================
+# INGESTION STATUS
+# ==================================================
 
 def record_ingestion(url, status, error_message=None):
-    """Save the URL status, attempt count, and latest error."""
+    """Record URL processing status and error details."""
+
     now = datetime.now(timezone.utc).isoformat()
 
     with sqlite3.connect(DB_PATH) as conn:
@@ -143,6 +161,7 @@ def record_ingestion(url, status, error_message=None):
 
 def get_ingestion_status():
     """Return the number of URLs recorded for each status."""
+
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
             """
@@ -156,7 +175,8 @@ def get_ingestion_status():
 
 
 def prioritize_urls(all_urls):
-    """Prioritize unfinished URLs before previously processed URLs."""
+    """Prioritize URLs that have not been processed successfully."""
+
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
             "SELECT url, status FROM ingestion_log"
@@ -182,12 +202,13 @@ def prioritize_urls(all_urls):
     return unfinished + previously_processed
 
 
-# --------------------------------------------------
-# HTTP and sitemap
-# --------------------------------------------------
+# ==================================================
+# HTTP REQUESTS
+# ==================================================
 
 async def fetch(client, url, retries=3):
-    """Fetch a URL and retry temporary HTTP or network errors."""
+    """Fetch a URL, retrying temporary network and server errors."""
+
     for attempt in range(retries):
         try:
             response = await client.get(
@@ -219,8 +240,13 @@ async def fetch(client, url, retries=3):
     )
 
 
+# ==================================================
+# SITEMAP PARSING
+# ==================================================
+
 async def get_urls(client, sitemap_url, visited=None):
-    """Read article URLs from a sitemap and child sitemaps."""
+    """Read article URLs from a sitemap and its child sitemaps."""
+
     if visited is None:
         visited = set()
 
@@ -267,12 +293,13 @@ async def get_urls(client, sitemap_url, visited=None):
     ]
 
 
-# --------------------------------------------------
-# Article parsing
-# --------------------------------------------------
+# ==================================================
+# ARTICLE PARSING
+# ==================================================
 
 def parse_article(html):
-    """Extract an article title and readable text from HTML."""
+    """Extract the article title and readable text from HTML."""
+
     soup = BeautifulSoup(html, "lxml")
 
     for element in soup.select(
@@ -328,12 +355,13 @@ def parse_article(html):
     return title, content
 
 
-# --------------------------------------------------
-# Save articles
-# --------------------------------------------------
+# ==================================================
+# SAVE ARTICLES
+# ==================================================
 
 def save_article(url, title, content, last_modified=None):
-    """Insert an article, update changed content, or skip unchanged."""
+    """Insert new content, update changed content, or skip unchanged."""
+
     digest = hashlib.sha256(
         content.encode("utf-8")
     ).hexdigest()
@@ -382,12 +410,13 @@ def save_article(url, title, content, last_modified=None):
     return "updated" if old else "added"
 
 
-# --------------------------------------------------
-# Main crawler
-# --------------------------------------------------
+# ==================================================
+# MAIN CRAWLER
+# ==================================================
 
 async def crawl():
     """Crawl up to MAX_ARTICLES support articles."""
+
     initialize_database()
 
     counts = {
@@ -401,9 +430,10 @@ async def crawl():
         headers={"User-Agent": USER_AGENT},
         timeout=30,
     ) as client:
+
         all_urls = await get_urls(client, SITEMAP_URL)
 
-        # Remove duplicates while preserving order.
+        # Remove duplicate URLs.
         unique_urls = list(dict.fromkeys(all_urls))
 
         # Keep only expected support article URLs.
@@ -422,6 +452,7 @@ async def crawl():
             ):
                 valid_urls.append(url)
 
+        # Process unfinished URLs first.
         prioritized_urls = prioritize_urls(valid_urls)
         urls = prioritized_urls[:MAX_ARTICLES]
 
@@ -434,6 +465,7 @@ async def crawl():
                 record_ingestion(url, "processing")
 
                 response = await fetch(client, url)
+
                 title, content = parse_article(response.text)
 
                 if not content.strip():
@@ -456,11 +488,16 @@ async def crawl():
             except Exception as exc:
                 counts["failed"] += 1
 
-                record_ingestion(
-                    url,
-                    "failed",
-                    str(exc),
-                )
+                try:
+                    record_ingestion(
+                        url,
+                        "failed",
+                        str(exc),
+                    )
+                except Exception as log_exc:
+                    print(
+                        f"Could not record ingestion error: {log_exc}"
+                    )
 
                 print(f"Failed: {url} - {exc}")
 
@@ -471,9 +508,19 @@ async def crawl():
             "SELECT COUNT(*) FROM articles"
         ).fetchone()[0]
 
+        active_count = conn.execute(
+            "SELECT COUNT(*) FROM articles WHERE status = 'active'"
+        ).fetchone()[0]
+
+    print("=" * 60)
+    print("INGESTION FINISHED")
+    print(f"Crawler database path: {DB_PATH.resolve()}")
+    print(f"Database exists: {DB_PATH.exists()}")
+    print(f"Total articles in database: {article_count}")
+    print(f"Active articles in database: {active_count}")
     print("Ingestion summary:", counts)
-    print("Total articles in database:", article_count)
     print("Saved ingestion status:", get_ingestion_status())
+    print("=" * 60)
 
 
 if __name__ == "__main__":
