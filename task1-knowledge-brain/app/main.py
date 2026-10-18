@@ -41,9 +41,7 @@ def get_embedding_model():
     global _embedding_model
 
     if _embedding_model is None:
-        # Import the heavy ML library only when actually required.
         from sentence_transformers import SentenceTransformer
-
         _embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
     return _embedding_model
@@ -51,9 +49,8 @@ def get_embedding_model():
 
 @lru_cache(maxsize=1)
 def encode_documents_cached(documents: tuple[str, ...]):
-    """Cache document embeddings for an unchanged document collection."""
+    """Cache embeddings for an unchanged document collection."""
     model = get_embedding_model()
-
     return model.encode(
         list(documents),
         normalize_embeddings=True,
@@ -133,7 +130,11 @@ class EscalationStatusUpdate(BaseModel):
 
 def search_articles(question: str, top_k: int = 5) -> list[dict]:
     """Search active articles using keywords and semantic similarity."""
+    print(f"DEBUG: Database path: {DB_PATH}")
+    print(f"DEBUG: Database exists: {DB_PATH.exists()}")
+
     if not DB_PATH.exists():
+        print("DEBUG: Database file does not exist.")
         return []
 
     stop_words = {
@@ -185,12 +186,25 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
 
     query_terms = tokenize(question)
     if not query_terms:
+        print("DEBUG: Query has no searchable terms.")
         return []
 
     concepts = [synonyms.get(term, {term}) for term in query_terms]
 
     with sqlite3.connect(DB_PATH) as conn:
         conn.row_factory = sqlite3.Row
+
+        tables = {
+            row[0] for row in conn.execute(
+                "SELECT name FROM sqlite_master WHERE type = 'table'"
+            ).fetchall()
+        }
+        print(f"DEBUG: Database tables: {sorted(tables)}")
+
+        if "articles" not in tables:
+            print("DEBUG: Articles table is missing.")
+            return []
+
         rows = conn.execute(
             """
             SELECT url, title, content
@@ -199,15 +213,22 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
             """
         ).fetchall()
 
+    print(f"DEBUG: Active articles found: {len(rows)}")
+    print(
+        "DEBUG: Sample article titles:",
+        [row["title"] for row in rows[:5]],
+    )
+
     if not rows:
+        print("DEBUG: No active articles found.")
         return []
 
     documents = tuple(
         f"{row['title']}\n{row['content']}" for row in rows
     )
 
-    # Semantic search is optional. If the model cannot load, continue
-    # using keyword search rather than failing the whole API request.
+    # Semantic search is optional; keyword search remains available
+    # if the embedding model fails to load.
     try:
         model = get_embedding_model()
 
@@ -222,7 +243,7 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
         semantic_scores = document_vectors @ query_vector
 
     except Exception as exc:
-        print(f"Embedding search unavailable: {type(exc).__name__}")
+        print(f"DEBUG: Embedding search unavailable: {type(exc).__name__}")
         semantic_scores = None
 
     results = []
@@ -264,13 +285,28 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
                 "title": row["title"],
                 "content": row["content"],
                 "score": float(keyword_score),
+                "keyword_score": keyword_score,
             })
 
-    return sorted(
+    ranked_results = sorted(
         results,
         key=lambda item: item["score"],
         reverse=True,
     )[:max(1, min(top_k, 20))]
+
+    print(f"DEBUG: Query: {question}")
+    print(f"DEBUG: Query terms: {sorted(query_terms)}")
+    print(f"DEBUG: Search results returned: {len(ranked_results)}")
+
+    for hit in ranked_results:
+        print(
+            f"DEBUG: {hit['title']} | "
+            f"score={hit['score']} | "
+            f"keywords={hit.get('keyword_score', 'N/A')} | "
+            f"semantic={hit.get('semantic_score', 'N/A')}"
+        )
+
+    return ranked_results
 
 
 # --------------------------------------------------
@@ -286,7 +322,6 @@ def evidence_fallback(hits: list[dict]) -> str:
         )
 
     excerpts = []
-
     for hit in hits:
         content = " ".join(hit["content"].split())[:700]
         excerpts.append(f"{hit['title']}: {content}")
@@ -352,7 +387,7 @@ Source articles:
         return answer or evidence_fallback(hits)
 
     except Exception as exc:
-        print("Claude request failed:", type(exc).__name__)
+        print(f"DEBUG: Claude request failed: {type(exc).__name__}")
         return evidence_fallback(hits)
 
 
@@ -381,19 +416,12 @@ def health():
 def ingestion_status():
     """Return article ingestion counts from the database."""
     if not DB_PATH.exists():
-        return {
-            "total_articles": 0,
-            "ingestion_status": {},
-        }
+        return {"total_articles": 0, "ingestion_status": {}}
 
     with sqlite3.connect(DB_PATH) as conn:
         tables = {
-            row[0]
-            for row in conn.execute(
-                """
-                SELECT name FROM sqlite_master
-                WHERE type = 'table'
-                """
+            row[0] for row in conn.execute(
+                "SELECT name FROM sqlite_master WHERE type = 'table'"
             ).fetchall()
         }
 
@@ -462,8 +490,12 @@ def query(request: QueryRequest):
             needs_human=True,
         )
 
-    # Reject weak retrieval matches before generating an answer.
     MIN_RETRIEVAL_SCORE = 0.35
+
+    print(
+        f"DEBUG: Best retrieval score: {hits[0]['score']} "
+        f"(minimum={MIN_RETRIEVAL_SCORE})"
+    )
 
     if hits[0]["score"] < MIN_RETRIEVAL_SCORE:
         record_escalation(
@@ -498,6 +530,10 @@ def query(request: QueryRequest):
 
     best_text = f"{hits[0]['title']} {hits[0]['content']}".lower()
     matched_terms = sum(1 for term in terms if term in best_text)
+
+    print(
+        f"DEBUG: Evidence terms matched: {matched_terms}/{len(terms)}"
+    )
 
     if not terms or matched_terms < min(2, len(terms)):
         record_escalation(
