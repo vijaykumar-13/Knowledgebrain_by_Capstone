@@ -23,7 +23,7 @@ db_setting = Path(os.getenv("DATABASE_PATH", "knowledge.db"))
 DB_PATH = db_setting if db_setting.is_absolute() else BASE_DIR / db_setting
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
 
 CRAWLER_PATH = BASE_DIR / "ingestion" / "crawler.py"
 
