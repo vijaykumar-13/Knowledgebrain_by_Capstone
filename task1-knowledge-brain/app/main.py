@@ -5,6 +5,7 @@ import sys
 import sqlite3
 import logging
 import subprocess
+import threading
 from pathlib import Path
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -22,25 +23,29 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 db_setting = Path(os.getenv("DATABASE_PATH", "knowledge.db"))
 DB_PATH = db_setting if db_setting.is_absolute() else BASE_DIR / db_setting
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
+GEMINI_MODEL = os.getenv(
+    "GEMINI_MODEL", "gemini-3.8-flash"
+).strip()
 
 CRAWLER_PATH = BASE_DIR / "ingestion" / "crawler.py"
 
-MAX_RESULTS = 5
 MIN_MATCH_SCORE = 1
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=os.getenv("LOG_LEVEL", "INFO").upper(),
+    format="%(asctime)s %(levelname)s:%(name)s:%(message)s",
+)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="AI Tech Consultant — Knowledge Brain",
     description="Knowledge retrieval, ingestion, and question answering API.",
-    version="0.6.0",
+    version="0.7.0",
 )
 
 ingestion_running = False
 ingestion_last_result = "never_run"
+ingestion_lock = threading.Lock()
 
 
 # --------------------------------------------------
@@ -70,6 +75,10 @@ class EscalationRequest(BaseModel):
     details: str = Field(default="", max_length=5000)
 
 
+class ResolveRequest(BaseModel):
+    resolution: str = Field(min_length=1, max_length=5000)
+
+
 # --------------------------------------------------
 # Database helpers
 # --------------------------------------------------
@@ -77,7 +86,9 @@ class EscalationRequest(BaseModel):
 @contextmanager
 def get_db():
     if not DB_PATH.exists():
-        raise FileNotFoundError(f"Database file not found: {DB_PATH}")
+        raise FileNotFoundError(
+            f"Database file not found: {DB_PATH}"
+        )
 
     connection = sqlite3.connect(str(DB_PATH), timeout=20)
     connection.row_factory = sqlite3.Row
@@ -91,7 +102,9 @@ def get_db():
 def get_article_columns(connection):
     return {
         row["name"]
-        for row in connection.execute("PRAGMA table_info(articles)").fetchall()
+        for row in connection.execute(
+            "PRAGMA table_info(articles)"
+        ).fetchall()
     }
 
 
@@ -118,21 +131,24 @@ def get_article_count():
 # --------------------------------------------------
 
 def run_crawler():
-    """Run crawler.py as a separate process and verify its result."""
+    """Execute crawler.py and record its actual result."""
     global ingestion_running, ingestion_last_result
 
     try:
-        if not CRAWLER_PATH.exists():
+        logger.info("INGESTION WORKER STARTED")
+        logger.info("Crawler path: %s", CRAWLER_PATH)
+        logger.info("Expected database path: %s", DB_PATH)
+
+        if not CRAWLER_PATH.is_file():
             raise FileNotFoundError(
                 f"Crawler file not found: {CRAWLER_PATH}"
             )
 
-        # Make the intended database path available to the crawler.
+        DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+
         env = os.environ.copy()
         env["DATABASE_PATH"] = str(DB_PATH)
-
-        logger.info("Starting crawler: %s", CRAWLER_PATH)
-        logger.info("Expected database path: %s", DB_PATH)
+        env["PYTHONUNBUFFERED"] = "1"
 
         result = subprocess.run(
             [sys.executable, str(CRAWLER_PATH)],
@@ -144,13 +160,19 @@ def run_crawler():
         )
 
         if result.stdout:
-            logger.info("Crawler output:\n%s", result.stdout)
+            logger.info(
+                "Crawler output:\n%s", result.stdout[-12000:]
+            )
 
         if result.stderr:
-            logger.info("Crawler messages:\n%s", result.stderr)
+            logger.info(
+                "Crawler messages:\n%s", result.stderr[-12000:]
+            )
 
         if result.returncode != 0:
-            ingestion_last_result = "failed"
+            ingestion_last_result = (
+                f"failed_exit_code_{result.returncode}"
+            )
             logger.error(
                 "Crawler exited with code %s", result.returncode
             )
@@ -159,18 +181,30 @@ def run_crawler():
         if not DB_PATH.exists():
             ingestion_last_result = "failed_database_missing"
             logger.error(
-                "Crawler finished but database was not created at %s",
+                "Crawler finished but database was not created: %s",
                 DB_PATH,
             )
             return
 
         with get_db() as connection:
+            tables = {
+                row["name"]
+                for row in connection.execute(
+                    "SELECT name FROM sqlite_master WHERE type='table'"
+                ).fetchall()
+            }
+
+            if "articles" not in tables:
+                ingestion_last_result = "failed_articles_table_missing"
+                logger.error("Database has no articles table")
+                return
+
             count = connection.execute(
                 "SELECT COUNT(*) FROM articles"
             ).fetchone()[0]
 
         ingestion_last_result = f"completed_{count}_articles"
-        logger.info("Ingestion finished: %s articles", count)
+        logger.info("INGESTION COMPLETED: %s articles", count)
 
     except subprocess.TimeoutExpired:
         ingestion_last_result = "failed_timeout"
@@ -182,26 +216,39 @@ def run_crawler():
 
     finally:
         ingestion_running = False
+        logger.info(
+            "INGESTION WORKER FINISHED: %s",
+            ingestion_last_result,
+        )
 
 
 @app.post("/ingestion/run")
 def start_ingestion(background_tasks: BackgroundTasks):
-    global ingestion_running
+    global ingestion_running, ingestion_last_result
 
-    if ingestion_running:
-        return {
-            "status": "already_running",
-            "message": "An ingestion job is already running.",
-        }
+    logger.info("INGESTION REQUEST ACCEPTED")
 
-    if not CRAWLER_PATH.exists():
+    if not CRAWLER_PATH.is_file():
+        ingestion_last_result = "failed_crawler_file_missing"
+        logger.error("Crawler file not found: %s", CRAWLER_PATH)
         raise HTTPException(
             status_code=500,
             detail=f"Crawler file not found: {CRAWLER_PATH}",
         )
 
-    ingestion_running = True
-    background_tasks.add_task(run_crawler)
+    with ingestion_lock:
+        if ingestion_running:
+            return {
+                "status": "already_running",
+                "message": "An ingestion job is already running.",
+                "last_result": ingestion_last_result,
+            }
+
+        ingestion_running = True
+        ingestion_last_result = "queued"
+        background_tasks.add_task(run_crawler)
+
+    logger.info("INGESTION BACKGROUND TASK SCHEDULED")
 
     return {
         "status": "started",
@@ -213,8 +260,8 @@ def start_ingestion(background_tasks: BackgroundTasks):
 def ingestion_status():
     database_exists = DB_PATH.exists()
     total = get_article_count()
-
     status = {}
+
     if database_exists:
         try:
             with get_db() as connection:
@@ -241,6 +288,7 @@ def ingestion_status():
         "total_articles": total,
         "ingestion_status": status,
         "database_exists": database_exists,
+        "database_path": str(DB_PATH),
         "job_running": ingestion_running,
         "last_result": ingestion_last_result,
     }
@@ -267,13 +315,17 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
             return []
 
         title_column = next(
-            (c for c in ("title", "name") if c in columns), None
+            (c for c in ("title", "name") if c in columns),
+            None,
         )
         content_column = next(
             (
                 c for c in (
-                    "content", "body", "text",
-                    "article_text", "description"
+                    "content",
+                    "body",
+                    "text",
+                    "article_text",
+                    "description",
                 )
                 if c in columns
             ),
@@ -285,7 +337,9 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
         )
 
         if not all((title_column, content_column, url_column)):
-            logger.error("Unexpected article schema: %s", sorted(columns))
+            logger.error(
+                "Unexpected article schema: %s", sorted(columns)
+            )
             return []
 
         sql = (
@@ -328,7 +382,9 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
     )
 
     matches = [
-        item for item in results if item["score"] >= MIN_MATCH_SCORE
+        item
+        for item in results
+        if item["score"] >= MIN_MATCH_SCORE
     ][:max(1, min(top_k, 10))]
 
     logger.info(
@@ -346,10 +402,15 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
 
 def generate_answer(question: str, articles: list[dict]) -> str:
     api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    model = os.getenv(
+        "GEMINI_MODEL", "gemini-3.8-flash"
+    ).strip()
 
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY is not configured")
+
+    if not model:
+        raise RuntimeError("GEMINI_MODEL is empty")
 
     evidence_parts = []
 
@@ -379,6 +440,8 @@ Source evidence:
 {evidence}
 """
 
+    logger.info("Generating answer with Gemini model: %s", model)
+
     client = genai.Client(api_key=api_key)
     response = client.models.generate_content(
         model=model,
@@ -386,6 +449,7 @@ Source evidence:
     )
 
     answer = (response.text or "").strip()
+
     if not answer:
         raise RuntimeError("Gemini returned an empty answer")
 
@@ -429,7 +493,9 @@ def health():
         "llm_configured": bool(
             os.getenv("GEMINI_API_KEY", "").strip()
         ),
-        "llm_model": os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+        "llm_model": os.getenv(
+            "GEMINI_MODEL", "gemini-3.8-flash"
+        ).strip(),
         "retrieval": "sqlite_keyword_search",
         "ingestion_running": ingestion_running,
         "ingestion_last_result": ingestion_last_result,
@@ -478,8 +544,8 @@ def query(request: QueryRequest):
         return QueryResponse(
             answer=(
                 "Relevant articles were found, but answer generation "
-                f"failed ({type(exc).__name__}). Please review the sources "
-                "or escalate to a human expert."
+                f"failed ({type(exc).__name__}). Check the Render logs "
+                "and review the sources, or escalate to a human expert."
             ),
             status="generation_error",
             sources=sources,
@@ -535,7 +601,6 @@ def create_escalation(request: EscalationRequest):
         )
 
     initialize_escalations_table()
-
     created_at = datetime.now(timezone.utc).isoformat()
 
     with sqlite3.connect(str(DB_PATH), timeout=20) as connection:
@@ -575,7 +640,10 @@ def list_escalations():
 
 
 @app.post("/escalations/{escalation_id}/resolve")
-def resolve_escalation(escalation_id: int, resolution: str):
+def resolve_escalation(
+    escalation_id: int,
+    request: ResolveRequest,
+):
     if not DB_PATH.exists():
         raise HTTPException(
             status_code=503,
@@ -591,7 +659,7 @@ def resolve_escalation(escalation_id: int, resolution: str):
             SET status = 'resolved', resolution = ?
             WHERE id = ?
             """,
-            (resolution, escalation_id),
+            (request.resolution, escalation_id),
         )
         connection.commit()
 
@@ -604,5 +672,5 @@ def resolve_escalation(escalation_id: int, resolution: str):
     return {
         "id": escalation_id,
         "status": "resolved",
-        "resolution": resolution,
+        "resolution": request.resolution,
     }
