@@ -13,17 +13,25 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 
-load_dotenv()
+# --------------------------------------------------
+# Configuration
+# --------------------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+
+load_dotenv(BASE_DIR / ".env")
 
 SITEMAP_URL = (
     "https://support.brilliantdirectories.com/support/sitemap.xml"
 )
 
-DB_PATH = Path(
-    os.getenv(
-        "DATABASE_PATH",
-        Path(__file__).resolve().parents[1] / "knowledge.db",
-    )
+# Resolve relative DATABASE_PATH values against the
+# task1-knowledge-brain directory, just like app/main.py.
+db_setting = Path(os.getenv("DATABASE_PATH", "knowledge.db"))
+DB_PATH = (
+    db_setting
+    if db_setting.is_absolute()
+    else BASE_DIR / db_setting
 )
 
 USER_AGENT = "AI-Tech-Consultant-Student-Project/0.1"
@@ -32,6 +40,10 @@ MAX_ARTICLES = 20
 
 RETRYABLE_STATUS_CODES = (429, 500, 502, 503, 504)
 
+
+# --------------------------------------------------
+# Database
+# --------------------------------------------------
 
 def initialize_database():
     """Create the article and ingestion-tracking tables."""
@@ -64,6 +76,21 @@ def initialize_database():
             )
             """
         )
+
+    print(f"Database path: {DB_PATH}")
+    print(f"Database exists: {DB_PATH.exists()}")
+
+    with sqlite3.connect(DB_PATH) as conn:
+        tables = conn.execute(
+            """
+            SELECT name
+            FROM sqlite_master
+            WHERE type = 'table'
+            ORDER BY name
+            """
+        ).fetchall()
+
+        print("Database tables:", [row[0] for row in tables])
 
 
 def record_ingestion(url, status, error_message=None):
@@ -129,19 +156,13 @@ def get_ingestion_status():
 
 
 def prioritize_urls(all_urls):
-    """
-    Prioritize new, pending, failed, and interrupted URLs.
-
-    Previously processed URLs remain eligible for refresh checks.
-    """
+    """Prioritize unfinished URLs before previously processed URLs."""
     with sqlite3.connect(DB_PATH) as conn:
         rows = conn.execute(
             "SELECT url, status FROM ingestion_log"
         ).fetchall()
 
-    status_by_url = {
-        url: status for url, status in rows
-    }
+    status_by_url = {url: status for url, status in rows}
 
     unfinished = []
     previously_processed = []
@@ -160,6 +181,10 @@ def prioritize_urls(all_urls):
 
     return unfinished + previously_processed
 
+
+# --------------------------------------------------
+# HTTP and sitemap
+# --------------------------------------------------
 
 async def fetch(client, url, retries=3):
     """Fetch a URL and retry temporary HTTP or network errors."""
@@ -195,7 +220,7 @@ async def fetch(client, url, retries=3):
 
 
 async def get_urls(client, sitemap_url, visited=None):
-    """Read article URLs from a sitemap and its child sitemaps."""
+    """Read article URLs from a sitemap and child sitemaps."""
     if visited is None:
         visited = set()
 
@@ -241,6 +266,10 @@ async def get_urls(client, sitemap_url, visited=None):
         if node.text and node.text.strip()
     ]
 
+
+# --------------------------------------------------
+# Article parsing
+# --------------------------------------------------
 
 def parse_article(html):
     """Extract an article title and readable text from HTML."""
@@ -299,8 +328,12 @@ def parse_article(html):
     return title, content
 
 
+# --------------------------------------------------
+# Save articles
+# --------------------------------------------------
+
 def save_article(url, title, content, last_modified=None):
-    """Insert a new article, update changed content, or skip unchanged."""
+    """Insert an article, update changed content, or skip unchanged."""
     digest = hashlib.sha256(
         content.encode("utf-8")
     ).hexdigest()
@@ -349,8 +382,12 @@ def save_article(url, title, content, last_modified=None):
     return "updated" if old else "added"
 
 
+# --------------------------------------------------
+# Main crawler
+# --------------------------------------------------
+
 async def crawl():
-    """Crawl up to MAX_ARTICLES, prioritizing unfinished URLs."""
+    """Crawl up to MAX_ARTICLES support articles."""
     initialize_database()
 
     counts = {
@@ -369,7 +406,7 @@ async def crawl():
         # Remove duplicates while preserving order.
         unique_urls = list(dict.fromkeys(all_urls))
 
-        # Filter to the expected support article URL format.
+        # Keep only expected support article URLs.
         valid_urls = []
 
         for url in unique_urls:
@@ -385,10 +422,7 @@ async def crawl():
             ):
                 valid_urls.append(url)
 
-        # Retry unfinished URLs before refreshing processed URLs.
         prioritized_urls = prioritize_urls(valid_urls)
-
-        # Process no more than MAX_ARTICLES during this run.
         urls = prioritized_urls[:MAX_ARTICLES]
 
         print(f"Valid sitemap article URLs: {len(valid_urls)}")
@@ -400,17 +434,12 @@ async def crawl():
                 record_ingestion(url, "processing")
 
                 response = await fetch(client, url)
-
                 title, content = parse_article(response.text)
 
                 if not content.strip():
-                    raise ValueError(
-                        "No article text extracted"
-                    )
+                    raise ValueError("No article text extracted")
 
-                last_modified = response.headers.get(
-                    "Last-Modified"
-                )
+                last_modified = response.headers.get("Last-Modified")
 
                 result = save_article(
                     url,
@@ -420,7 +449,6 @@ async def crawl():
                 )
 
                 counts[result] += 1
-
                 record_ingestion(url, result)
 
                 print(f"Processed: {title} ({result})")
@@ -438,7 +466,13 @@ async def crawl():
 
             await asyncio.sleep(REQUEST_DELAY)
 
+    with sqlite3.connect(DB_PATH) as conn:
+        article_count = conn.execute(
+            "SELECT COUNT(*) FROM articles"
+        ).fetchone()[0]
+
     print("Ingestion summary:", counts)
+    print("Total articles in database:", article_count)
     print("Saved ingestion status:", get_ingestion_status())
 
 
