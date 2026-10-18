@@ -10,7 +10,6 @@ import anthropic
 from dotenv import load_dotenv
 from fastapi import BackgroundTasks, FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from sentence_transformers import SentenceTransformer
 
 
 # --------------------------------------------------
@@ -38,24 +37,29 @@ _embedding_model = None
 
 
 def get_embedding_model():
-    """Load the local embedding model only when needed."""
+    """Load the embedding model only when semantic search needs it."""
     global _embedding_model
 
     if _embedding_model is None:
+        # Import the heavy ML library only when actually required.
+        from sentence_transformers import SentenceTransformer
+
         _embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
     return _embedding_model
 
 
-@lru_cache(maxsize=2)
+@lru_cache(maxsize=1)
 def encode_documents_cached(documents: tuple[str, ...]):
-    """Cache article embeddings while document text is unchanged."""
+    """Cache document embeddings for an unchanged document collection."""
     model = get_embedding_model()
 
     return model.encode(
         list(documents),
         normalize_embeddings=True,
         convert_to_numpy=True,
+        batch_size=8,
+        show_progress_bar=False,
     )
 
 
@@ -84,7 +88,6 @@ def init_escalations_table():
 def record_escalation(question: str, reason: str):
     """Save an unsupported question for human review."""
     init_escalations_table()
-
     created_at = datetime.now(timezone.utc).isoformat()
 
     with sqlite3.connect(DB_PATH) as conn:
@@ -129,7 +132,7 @@ class EscalationStatusUpdate(BaseModel):
 # --------------------------------------------------
 
 def search_articles(question: str, top_k: int = 5) -> list[dict]:
-    """Search active articles using keyword and semantic similarity."""
+    """Search active articles using keywords and semantic similarity."""
     if not DB_PATH.exists():
         return []
 
@@ -167,15 +170,9 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
             "member", "members", "user", "users",
             "contact", "contacts",
         },
-        "csv": {
-            "csv", "spreadsheet", "spreadsheets", "excel",
-        },
-        "spreadsheet": {
-            "csv", "spreadsheet", "spreadsheets", "excel",
-        },
-        "excel": {
-            "csv", "spreadsheet", "spreadsheets", "excel",
-        },
+        "csv": {"csv", "spreadsheet", "spreadsheets", "excel"},
+        "spreadsheet": {"csv", "spreadsheet", "spreadsheets", "excel"},
+        "excel": {"csv", "spreadsheet", "spreadsheets", "excel"},
     }
 
     def tokenize(text: str) -> set[str]:
@@ -187,7 +184,6 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
         }
 
     query_terms = tokenize(question)
-
     if not query_terms:
         return []
 
@@ -210,15 +206,21 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
         f"{row['title']}\n{row['content']}" for row in rows
     )
 
+    # Semantic search is optional. If the model cannot load, continue
+    # using keyword search rather than failing the whole API request.
     try:
         model = get_embedding_model()
+
         query_vector = model.encode(
             [question],
             normalize_embeddings=True,
             convert_to_numpy=True,
+            show_progress_bar=False,
         )[0]
+
         document_vectors = encode_documents_cached(documents)
         semantic_scores = document_vectors @ query_vector
+
     except Exception as exc:
         print(f"Embedding search unavailable: {type(exc).__name__}")
         semantic_scores = None
@@ -261,7 +263,7 @@ def search_articles(question: str, top_k: int = 5) -> list[dict]:
                 "url": row["url"],
                 "title": row["title"],
                 "content": row["content"],
-                "score": keyword_score,
+                "score": float(keyword_score),
             })
 
     return sorted(
@@ -462,6 +464,7 @@ def query(request: QueryRequest):
 
     # Reject weak retrieval matches before generating an answer.
     MIN_RETRIEVAL_SCORE = 0.35
+
     if hits[0]["score"] < MIN_RETRIEVAL_SCORE:
         record_escalation(
             request.question,
