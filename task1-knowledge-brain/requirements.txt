@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+beautifulsoup4
+lxml
+python-dotenv
+pytest
+anthropic==1.15.0
+sentence-transformers==6.1.0

@@ -1,0 +1,289 @@
+{
+  "evaluation_type": "synthetic_logic_evaluation",
+  "total_cases": 20,
+  "passed_cases": 20,
+  "failed_cases": 0,
+  "accuracy_percent": 100.0,
+  "cases": [
+    {
+      "case_id": "MS01",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS02",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS03",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS04",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS05",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS06",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS07",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS08",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS09",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS10",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS11",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS12",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS13",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS14",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS15",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS16",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS17",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS18",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS19",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    },
+    {
+      "case_id": "MS20",
+      "passed": true,
+      "checks": {
+        "two_client_requests": true,
+        "consultant_action_separated": true,
+        "human_feasibility_review": true,
+        "not_auto_confirmed": true,
+        "draft_requires_approval": true,
+        "provisional_estimate": true
+      },
+      "requirement_count": 2,
+      "consultant_action_count": 1
+    }
+  ]
+}

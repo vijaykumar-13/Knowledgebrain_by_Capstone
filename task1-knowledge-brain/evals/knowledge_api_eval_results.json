@@ -1,0 +1,148 @@
+{
+  "total": 20,
+  "passed": 20,
+  "failed": 0,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "id": "KB01",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB02",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB03",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB04",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB05",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB06",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB07",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB08",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB09",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB10",
+      "expected": "supported",
+      "actual_status": "answered",
+      "needs_human": false,
+      "passed": true
+    },
+    {
+      "id": "KB11",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB12",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB13",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB14",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB15",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB16",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB17",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB18",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB19",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    },
+    {
+      "id": "KB20",
+      "expected": "unsupported",
+      "actual_status": "insufficient_evidence",
+      "needs_human": true,
+      "passed": true
+    }
+  ]
+}

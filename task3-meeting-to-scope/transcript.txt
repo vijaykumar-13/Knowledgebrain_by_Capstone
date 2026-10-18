@@ -1,0 +1,4 @@
+Client: We need to improve website search and the mobile experience.
+Client: We want filters so customers can find products faster.
+Consultant: We need to check what the existing platform supports and confirm the filter fields.
+Client: We should agree on acceptance criteria before confirming the timeline.

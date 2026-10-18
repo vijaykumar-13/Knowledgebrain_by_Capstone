@@ -1,0 +1,27 @@
+﻿.venv/
+**/.venv/
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+!**/.env.example
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+.pytest_cache/
+dist/
+*.log
+.DS_Store
+
+# Local backup copies; keep out of the submission
+*.bak
+*.backup
+*.before-*
+*_backup.py
+
+# All numbered and alternate backup files
+*.bak*
+*.backup*

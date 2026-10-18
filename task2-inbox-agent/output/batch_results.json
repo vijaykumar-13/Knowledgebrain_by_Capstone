@@ -1,0 +1,1576 @@
+{
+  "summary": {
+    "totalEmails": 50,
+    "passed": 50,
+    "failed": 0,
+    "accuracyPercent": 100,
+    "supportedCases": 25,
+    "unsupportedCases": 25,
+    "note": "Synthetic evaluation dataset. All responses are drafts; no emails are sent."
+  },
+  "results": [
+    {
+      "emailNumber": 1,
+      "originalEmail": {
+        "from": "customer001@example.com",
+        "subject": "Import members using CSV",
+        "body": "How can I import members into the system using a CSV file? Could you please guide me?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.805
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.589
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.365
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 2,
+      "originalEmail": {
+        "from": "customer002@example.com",
+        "subject": "Import members using CSV",
+        "body": "How can I import members into the system using a CSV file? I would appreciate clear instructions."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.798
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.585
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.362
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 3,
+      "originalEmail": {
+        "from": "customer003@example.com",
+        "subject": "Import members using CSV",
+        "body": "How can I import members into the system using a CSV file? Please help me understand the steps."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.804
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.585
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.455
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 4,
+      "originalEmail": {
+        "from": "customer004@example.com",
+        "subject": "Import members using CSV",
+        "body": "How can I import members into the system using a CSV file? Could you explain how to do this?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.809
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.584
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.355
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 5,
+      "originalEmail": {
+        "from": "customer005@example.com",
+        "subject": "Import members using CSV",
+        "body": "How can I import members into the system using a CSV file? Please provide the relevant information."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.802
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.632
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.367
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 6,
+      "originalEmail": {
+        "from": "customer006@example.com",
+        "subject": "CSV member upload instructions",
+        "body": "Please explain how to upload a CSV file to import members. Could you please guide me?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.801
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.66
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.491
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 7,
+      "originalEmail": {
+        "from": "customer007@example.com",
+        "subject": "CSV member upload instructions",
+        "body": "Please explain how to upload a CSV file to import members. I would appreciate clear instructions."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.797
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.665
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.487
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 8,
+      "originalEmail": {
+        "from": "customer008@example.com",
+        "subject": "CSV member upload instructions",
+        "body": "Please explain how to upload a CSV file to import members. Please help me understand the steps."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.798
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.665
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.513
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 9,
+      "originalEmail": {
+        "from": "customer009@example.com",
+        "subject": "CSV member upload instructions",
+        "body": "Please explain how to upload a CSV file to import members. Could you explain how to do this?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.803
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.659
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.478
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 10,
+      "originalEmail": {
+        "from": "customer010@example.com",
+        "subject": "CSV member upload instructions",
+        "body": "Please explain how to upload a CSV file to import members. Please provide the relevant information."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.799
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.669
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.494
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 11,
+      "originalEmail": {
+        "from": "customer011@example.com",
+        "subject": "Trouble importing members",
+        "body": "I need help with the process for importing members via CSV. Could you please guide me?"
+      },
+      "category": "troubleshooting",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.644
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.577
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.429
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 12,
+      "originalEmail": {
+        "from": "customer012@example.com",
+        "subject": "Trouble importing members",
+        "body": "I need help with the process for importing members via CSV. I would appreciate clear instructions."
+      },
+      "category": "troubleshooting",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhere To Get Help & Support: Where To Get Help & Support Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649874 We all need support at one time or another, and the great news is we have LOTS of ways to get the support needed! Below are easy ways to get support. Help Center Articles Our knowledge base is filled with great documentation about how the directory software works inside and out! Find questions to common questions as well as advanced documentation for developers Go To Knowledge Center » Customizations & Advanced Changes Have neat ideas to customize the site? Get free quotes from certified developers at fair prices in the Marketplace. From small changes to total theme makeovers, get\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.636
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.576
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.407
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 13,
+      "originalEmail": {
+        "from": "customer013@example.com",
+        "subject": "Trouble importing members",
+        "body": "I need help with the process for importing members via CSV. Please help me understand the steps."
+      },
+      "category": "troubleshooting",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.678
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.566
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.418
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 14,
+      "originalEmail": {
+        "from": "customer014@example.com",
+        "subject": "Trouble importing members",
+        "body": "I need help with the process for importing members via CSV. Could you explain how to do this?"
+      },
+      "category": "troubleshooting",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhere To Get Help & Support: Where To Get Help & Support Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649874 We all need support at one time or another, and the great news is we have LOTS of ways to get the support needed! Below are easy ways to get support. Help Center Articles Our knowledge base is filled with great documentation about how the directory software works inside and out! Find questions to common questions as well as advanced documentation for developers Go To Knowledge Center » Customizations & Advanced Changes Have neat ideas to customize the site? Get free quotes from certified developers at fair prices in the Marketplace. From small changes to total theme makeovers, get\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.649
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.561
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.366
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 15,
+      "originalEmail": {
+        "from": "customer015@example.com",
+        "subject": "Trouble importing members",
+        "body": "I need help with the process for importing members via CSV. Please provide the relevant information."
+      },
+      "category": "troubleshooting",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.638
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.625
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.439
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 16,
+      "originalEmail": {
+        "from": "customer016@example.com",
+        "subject": "Member list import",
+        "body": "What is the process for importing a list of members from CSV? Could you please guide me?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.792
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.695
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.523
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 17,
+      "originalEmail": {
+        "from": "customer017@example.com",
+        "subject": "Member list import",
+        "body": "What is the process for importing a list of members from CSV? I would appreciate clear instructions."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.784
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.697
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.524
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 18,
+      "originalEmail": {
+        "from": "customer018@example.com",
+        "subject": "Member list import",
+        "body": "What is the process for importing a list of members from CSV? Please help me understand the steps."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.793
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.691
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.516
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 19,
+      "originalEmail": {
+        "from": "customer019@example.com",
+        "subject": "Member list import",
+        "body": "What is the process for importing a list of members from CSV? Could you explain how to do this?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.796
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.689
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.515
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 20,
+      "originalEmail": {
+        "from": "customer020@example.com",
+        "subject": "Member list import",
+        "body": "What is the process for importing a list of members from CSV? Please provide the relevant information."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nTroubleshooting: Member Search Result Issues Overview: Troubleshooting: Member Search Result Issues Overview Link: https://support.brilliantdirectories.com/support/solutions/articles/5000660016 Before diving into possible reasons why the member may not be appearing in the search result conducted, we highly recommend going over the article down below, as the member itself may not be active on the site or maybe in a membership plan that is not searchable: Troubleshooting: Listing is not Public or Active Another possible setting that will have an effect on which members will display in search results would be the Require Complete Profiles setting. When this setting is enabled, certain members will be hidden from search results. For more information\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.788
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.712
+        },
+        {
+          "title": "Troubleshooting: Member Search Result Issues Overview",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000660016-troubleshooting-member-search-result-issues-overview",
+          "relevance": 0.534
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 21,
+      "originalEmail": {
+        "from": "customer021@example.com",
+        "subject": "Bulk member import",
+        "body": "How do I add multiple members using a CSV import? Could you please guide me?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.842
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.7
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 22,
+      "originalEmail": {
+        "from": "customer022@example.com",
+        "subject": "Bulk member import",
+        "body": "How do I add multiple members using a CSV import? I would appreciate clear instructions."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.844
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.698
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.575
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 23,
+      "originalEmail": {
+        "from": "customer023@example.com",
+        "subject": "Bulk member import",
+        "body": "How do I add multiple members using a CSV import? Please help me understand the steps."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.839
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.698
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.565
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 24,
+      "originalEmail": {
+        "from": "customer024@example.com",
+        "subject": "Bulk member import",
+        "body": "How do I add multiple members using a CSV import? Could you explain how to do this?"
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.845
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.693
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.561
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 25,
+      "originalEmail": {
+        "from": "customer025@example.com",
+        "subject": "Bulk member import",
+        "body": "How do I add multiple members using a CSV import? Please provide the relevant information."
+      },
+      "category": "how_to",
+      "expectedSupported": true,
+      "actualStatus": "answered",
+      "needsHumanExpert": false,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. Here is the information we found:\n\nAnswer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nHow To Import Members Via CSV File: How To Import Members Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558475 Overview Importing members can be a bit of a tricky process due to the fact that all of the data entered must be simple, clean text (no formatting, line breaks, or other things that can break a CSV file), and the data must all be in the proper columns in order to import properly. To start, here are some files that will help with understanding how the import process works: Import template with ALL fields and explanations of each field Import template with only the simple / basic required fields Example of a completed import file with ALL fields Example of a completed simple \n\nHow To Import Categories Via CSV File: How To Import Categories Via CSV File Link: https://support.brilliantdirectories.com/support/solutions/articles/5000558401 To import a category structure via CSV file (useful for quickly importing large category structures), please follow the steps below for creating the file. This can be used to import up to 3 levels of categories: Top Level Categories, Sub Level Categories, and Sub-Sub Level Categories (for a total of three tiers ). Step 1: Create The Category Structure in a CSV file Download the Category Structure Import Template (attached at the bottom of the article). Open up the file and expand the width of the columns so all of the text can be seen in each one. Column A will have all \n\nMandatory Fields For Member Imports: Mandatory Fields For Member Imports Link: https://support.brilliantdirectories.com/support/solutions/articles/5000568062 If there are any issues during the import process, it may be caused by one of the following mandatory fields missing. Name or Company (name, company) Field Variable: name, company Include either the \"name\" or \"company\" fields. It is also possible to include both. Name: Combines the first and last name. Company: Company name Listing Type (listing_type) Field Variable: listing_type Company: Will display the company name in search results Individual: Displays the individual's name in search results (commonly used for medical or professional directories). Country Code (country\n\nMember Profile Analytics: Member Profile Analytics Link: https://support.brilliantdirectories.com/support/solutions/articles/5000619186 The Member Profile Analytics add-on is a click tracking tool, provides insights for admins and members with valuable data such as profile views, clicks to their website, visits to their social media profiles and member posts – all broken down by day, month and year. Use these statistics to show the members how they are analytically benefiting from the website. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Member Profile Analytics Add-On Enabling the Add-On Select which membership pl\n\nPlease let us know if you need further assistance.",
+      "sources": [
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 1
+        },
+        {
+          "title": "How To Import Categories Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+          "relevance": 0.843
+        },
+        {
+          "title": "Mandatory Fields For Member Imports",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000568062-mandatory-fields-for-member-imports",
+          "relevance": 0.706
+        },
+        {
+          "title": "Member Profile Analytics",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000619186-member-profile-analytics",
+          "relevance": 0.577
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 26,
+      "originalEmail": {
+        "from": "customer026@example.com",
+        "subject": "Request for a refund",
+        "body": "I would like to request a refund for my recent payment. Could you please guide me?"
+      },
+      "category": "refund_or_cancellation",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How Do I Cancel Payment Subscriptions - Orders",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000567728-how-do-i-cancel-payment-subscriptions-orders",
+          "relevance": 1
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.434
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 27,
+      "originalEmail": {
+        "from": "customer027@example.com",
+        "subject": "Request for a refund",
+        "body": "I would like to request a refund for my recent payment. I would appreciate clear instructions."
+      },
+      "category": "refund_or_cancellation",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How Do I Cancel Payment Subscriptions - Orders",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000567728-how-do-i-cancel-payment-subscriptions-orders",
+          "relevance": 1
+        },
+        {
+          "title": "Emails » Email Accounts",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558363-emails-email-accounts",
+          "relevance": 0.422
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 28,
+      "originalEmail": {
+        "from": "customer028@example.com",
+        "subject": "Request for a refund",
+        "body": "I would like to request a refund for my recent payment. Please help me understand the steps."
+      },
+      "category": "refund_or_cancellation",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How Do I Cancel Payment Subscriptions - Orders",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000567728-how-do-i-cancel-payment-subscriptions-orders",
+          "relevance": 1
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.67
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.648
+        },
+        {
+          "title": "Emails » Email Accounts",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558363-emails-email-accounts",
+          "relevance": 0.507
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 29,
+      "originalEmail": {
+        "from": "customer029@example.com",
+        "subject": "Request for a refund",
+        "body": "I would like to request a refund for my recent payment. Could you explain how to do this?"
+      },
+      "category": "refund_or_cancellation",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How Do I Cancel Payment Subscriptions - Orders",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000567728-how-do-i-cancel-payment-subscriptions-orders",
+          "relevance": 1
+        },
+        {
+          "title": "Emails » Email Accounts",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558363-emails-email-accounts",
+          "relevance": 0.415
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 30,
+      "originalEmail": {
+        "from": "customer030@example.com",
+        "subject": "Request for a refund",
+        "body": "I would like to request a refund for my recent payment. Please provide the relevant information."
+      },
+      "category": "refund_or_cancellation",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How Do I Cancel Payment Subscriptions - Orders",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000567728-how-do-i-cancel-payment-subscriptions-orders",
+          "relevance": 1
+        },
+        {
+          "title": "SSL / HTTPS FAQ",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000665570-ssl-https-faq",
+          "relevance": 0.462
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.365
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 31,
+      "originalEmail": {
+        "from": "customer031@example.com",
+        "subject": "Website logo update",
+        "body": "How do I change the logo displayed on my website? Could you please guide me?"
+      },
+      "category": "how_to",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 1
+        },
+        {
+          "title": "How to Override and Edit Default CSS stylesheets",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+          "relevance": 0.916
+        },
+        {
+          "title": "Don't Activate All Of The Post Types Prior To the Website Launch",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000636428-don-t-activate-all-of-the-post-types-prior-to-the-website-launch",
+          "relevance": 0.45
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 32,
+      "originalEmail": {
+        "from": "customer032@example.com",
+        "subject": "Website logo update",
+        "body": "How do I change the logo displayed on my website? I would appreciate clear instructions."
+      },
+      "category": "how_to",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How to Override and Edit Default CSS stylesheets",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+          "relevance": 1
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.922
+        },
+        {
+          "title": "Don't Activate All Of The Post Types Prior To the Website Launch",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000636428-don-t-activate-all-of-the-post-types-prior-to-the-website-launch",
+          "relevance": 0.491
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 33,
+      "originalEmail": {
+        "from": "customer033@example.com",
+        "subject": "Website logo update",
+        "body": "How do I change the logo displayed on my website? Please help me understand the steps."
+      },
+      "category": "how_to",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 1
+        },
+        {
+          "title": "How to Override and Edit Default CSS stylesheets",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+          "relevance": 0.655
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.5
+        },
+        {
+          "title": "Predictive Keyword Search",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000657865-predictive-keyword-search",
+          "relevance": 0.394
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 34,
+      "originalEmail": {
+        "from": "customer034@example.com",
+        "subject": "Website logo update",
+        "body": "How do I change the logo displayed on my website? Could you explain how to do this?"
+      },
+      "category": "how_to",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "How to Override and Edit Default CSS stylesheets",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+          "relevance": 1
+        },
+        {
+          "title": "Don't Activate All Of The Post Types Prior To the Website Launch",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000636428-don-t-activate-all-of-the-post-types-prior-to-the-website-launch",
+          "relevance": 0.507
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 35,
+      "originalEmail": {
+        "from": "customer035@example.com",
+        "subject": "Website logo update",
+        "body": "How do I change the logo displayed on my website? Please provide the relevant information."
+      },
+      "category": "how_to",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 1
+        },
+        {
+          "title": "How to Override and Edit Default CSS stylesheets",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+          "relevance": 0.888
+        },
+        {
+          "title": "SSL / HTTPS FAQ",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000665570-ssl-https-faq",
+          "relevance": 0.632
+        },
+        {
+          "title": "Predictive Keyword Search",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000657865-predictive-keyword-search",
+          "relevance": 0.506
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 36,
+      "originalEmail": {
+        "from": "customer036@example.com",
+        "subject": "Payroll question",
+        "body": "How should I calculate payroll taxes for my employees? Could you please guide me?"
+      },
+      "category": "general",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 37,
+      "originalEmail": {
+        "from": "customer037@example.com",
+        "subject": "Payroll question",
+        "body": "How should I calculate payroll taxes for my employees? I would appreciate clear instructions."
+      },
+      "category": "general",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 38,
+      "originalEmail": {
+        "from": "customer038@example.com",
+        "subject": "Payroll question",
+        "body": "How should I calculate payroll taxes for my employees? Please help me understand the steps."
+      },
+      "category": "general",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 1
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.808
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 39,
+      "originalEmail": {
+        "from": "customer039@example.com",
+        "subject": "Payroll question",
+        "body": "How should I calculate payroll taxes for my employees? Could you explain how to do this?"
+      },
+      "category": "general",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 40,
+      "originalEmail": {
+        "from": "customer040@example.com",
+        "subject": "Payroll question",
+        "body": "How should I calculate payroll taxes for my employees? Please provide the relevant information."
+      },
+      "category": "general",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 41,
+      "originalEmail": {
+        "from": "customer041@example.com",
+        "subject": "Account security concern",
+        "body": "I think someone accessed my account without permission. Could you please guide me?"
+      },
+      "category": "account_security",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 42,
+      "originalEmail": {
+        "from": "customer042@example.com",
+        "subject": "Account security concern",
+        "body": "I think someone accessed my account without permission. I would appreciate clear instructions."
+      },
+      "category": "account_security",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 43,
+      "originalEmail": {
+        "from": "customer043@example.com",
+        "subject": "Account security concern",
+        "body": "I think someone accessed my account without permission. Please help me understand the steps."
+      },
+      "category": "account_security",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 44,
+      "originalEmail": {
+        "from": "customer044@example.com",
+        "subject": "Account security concern",
+        "body": "I think someone accessed my account without permission. Could you explain how to do this?"
+      },
+      "category": "account_security",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 45,
+      "originalEmail": {
+        "from": "customer045@example.com",
+        "subject": "Account security concern",
+        "body": "I think someone accessed my account without permission. Please provide the relevant information."
+      },
+      "category": "account_security",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "SSL / HTTPS FAQ",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000665570-ssl-https-faq",
+          "relevance": 1
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 46,
+      "originalEmail": {
+        "from": "customer046@example.com",
+        "subject": "Product pricing request",
+        "body": "Can you provide a price quote for a custom product? Could you please guide me?"
+      },
+      "category": "quote_request",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 47,
+      "originalEmail": {
+        "from": "customer047@example.com",
+        "subject": "Product pricing request",
+        "body": "Can you provide a price quote for a custom product? I would appreciate clear instructions."
+      },
+      "category": "quote_request",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 48,
+      "originalEmail": {
+        "from": "customer048@example.com",
+        "subject": "Product pricing request",
+        "body": "Can you provide a price quote for a custom product? Please help me understand the steps."
+      },
+      "category": "quote_request",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 1
+        },
+        {
+          "title": "Where To Get Help & Support",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649874-where-to-get-help-support",
+          "relevance": 0.978
+        },
+        {
+          "title": "How To Import Members Via CSV File",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+          "relevance": 0.748
+        }
+      ],
+      "passed": true
+    },
+    {
+      "emailNumber": 49,
+      "originalEmail": {
+        "from": "customer049@example.com",
+        "subject": "Product pricing request",
+        "body": "Can you provide a price quote for a custom product? Could you explain how to do this?"
+      },
+      "category": "quote_request",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "emailNumber": 50,
+      "originalEmail": {
+        "from": "customer050@example.com",
+        "subject": "Product pricing request",
+        "body": "Can you provide a price quote for a custom product? Please provide the relevant information."
+      },
+      "category": "quote_request",
+      "expectedSupported": false,
+      "actualStatus": "insufficient_evidence",
+      "needsHumanExpert": true,
+      "needsHumanApproval": true,
+      "action": "DRAFT_ONLY - no email was sent",
+      "draft": "Hello,\n\nThank you for contacting us. A support specialist needs to review your question before we can provide an accurate answer.",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "total_cases": 20,
+  "supported_cases": 10,
+  "supported_retrieval_passes": 10,
+  "supported_retrieval_accuracy": 1.0,
+  "note": "Unsupported cases are recorded for manual/API-level escalation evaluation; retrieval results alone do not establish whether evidence is sufficient.",
+  "results": [
+    {
+      "id": "KB01",
+      "expected": "supported",
+      "question": "How do I import members via CSV file?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB02",
+      "expected": "supported",
+      "question": "How do I upload users using a spreadsheet?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB03",
+      "expected": "supported",
+      "question": "How can I add multiple members at once?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB04",
+      "expected": "supported",
+      "question": "How do I bulk import members?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB05",
+      "expected": "supported",
+      "question": "Can I upload a CSV file to add users?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB06",
+      "expected": "supported",
+      "question": "Where can I find instructions for importing members?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB07",
+      "expected": "supported",
+      "question": "How do I add users from a CSV spreadsheet?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB08",
+      "expected": "supported",
+      "question": "What is the process for importing members in bulk?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB09",
+      "expected": "supported",
+      "question": "How can I upload a list of members?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB10",
+      "expected": "supported",
+      "question": "I have a spreadsheet of users. How do I import it?",
+      "expected_title": "How To Import Members Via CSV File",
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": true
+    },
+    {
+      "id": "KB11",
+      "expected": "unsupported",
+      "question": "How can I build a rocket to travel to Mars?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB12",
+      "expected": "unsupported",
+      "question": "What is the current weather on Mars?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB13",
+      "expected": "unsupported",
+      "question": "How do I file my personal income tax return?",
+      "expected_title": null,
+      "top_title": "How To Import Members Via CSV File",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB14",
+      "expected": "unsupported",
+      "question": "Can you diagnose why my car engine is making noise?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB15",
+      "expected": "unsupported",
+      "question": "What medicine should I take for a toothache?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB16",
+      "expected": "unsupported",
+      "question": "How do I repair a household refrigerator compressor?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB17",
+      "expected": "unsupported",
+      "question": "What are the latest cricket scores?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB18",
+      "expected": "unsupported",
+      "question": "How do I apply for a passport?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB19",
+      "expected": "unsupported",
+      "question": "Can you recommend a university in another country?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    },
+    {
+      "id": "KB20",
+      "expected": "unsupported",
+      "question": "How do I build a swimming pool in my backyard?",
+      "expected_title": null,
+      "top_title": "NO RESULTS",
+      "expected_article_in_top_5": null
+    }
+  ]
+}

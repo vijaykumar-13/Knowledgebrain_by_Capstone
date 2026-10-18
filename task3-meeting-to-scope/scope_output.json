@@ -1,0 +1,121 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-001",
+      "description": "We need to improve website search and the mobile experience.",
+      "status": "client_requested_needs_confirmation",
+      "source": "Transcript line 1",
+      "confirmed": false
+    },
+    {
+      "requirement_id": "REQ-002",
+      "description": "We want filters so customers can find products faster.",
+      "status": "client_requested_needs_confirmation",
+      "source": "Transcript line 2",
+      "confirmed": false
+    }
+  ],
+  "consultant_actions": [
+    {
+      "description": "We need to check what the existing platform supports and confirm the filter fields.",
+      "source": "Transcript line 3",
+      "status": "proposed_action_not_client_requirement"
+    }
+  ],
+  "feasibility_check": {
+    "status": "provisional_needs_technical_review",
+    "needs_human": true,
+    "reason": "Retrieved documentation may describe related features but does not establish that all requested changes are supported by this project's existing configuration.",
+    "knowledge_lookup": {
+      "answer": "Answer based on retrieved knowledge-base evidence. The following excerpts are source material, not a generated step-by-step answer:\n\nPredictive Keyword Search: Predictive Keyword Search Link: https://support.brilliantdirectories.com/support/solutions/articles/5000657865 Search functionality is a key element of any directory website… It’s how the users are able to find the information they need. The Predictive Keyword Search add-on can help users find information on the website even faster. With this add-on, as a user begins typing their search term into the website’s search field they will instantly be presented with potential search results. How To Get This Add-On Websites with the VIP Add-Ons Club automatically have this add-on available: Join The VIP Add-Ons Club Purchase Individually: Predictive Keyword Search Add-On Enabling the Add-On To cust\n\nWhat The Brilliant Directories Support Team Can Help With: What The Brilliant Directories Support Team Can Help With Link: https://support.brilliantdirectories.com/support/solutions/articles/5000649876 At Brilliant Directories we know that the only way the software can continue to be successful is if our user base is able to launch and grow thriving internet businesses using the platform. To make sure that each of our users is put on the path to success, we have a full staff available to help guide all websites admins through the process of launching and growing the business. Brilliant Directories is designed to be a turn-key solution to help get the website idea launched quickly. Our support team is here to help navigate and find the settings neede\n\nDon't Activate All Of The Post Types Prior To the Website Launch: Don't Activate All Of The Post Types Prior To the Website Launch Link: https://support.brilliantdirectories.com/support/solutions/articles/5000636428 It's completely understandable why many website owners want to launch with all of the post types available to them out of the gate. There are many cool post types to choose from, such as coupons, videos, classifieds, articles, properties, photos, and more. It would seem only logical to make all of these post types available on the website for visitors to see from day one. The only drawback to activating all post types prior to the launch of the website is that the admin will be painting itself into a corner by having to spend countless hours cr\n\nTroubleshooting: Member Search Result Issues Overview: Troubleshooting: Member Search Result Issues Overview Link: https://support.brilliantdirectories.com/support/solutions/articles/5000660016 Before diving into possible reasons why the member may not be appearing in the search result conducted, we highly recommend going over the article down below, as the member itself may not be active on the site or maybe in a membership plan that is not searchable: Troubleshooting: Listing is not Public or Active Another possible setting that will have an effect on which members will display in search results would be the Require Complete Profiles setting. When this setting is enabled, certain members will be hidden from search results. For more information",
+      "status": "answered",
+      "sources": [
+        {
+          "title": "Predictive Keyword Search",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000657865-predictive-keyword-search",
+          "relevance": 1.0
+        },
+        {
+          "title": "What The Brilliant Directories Support Team Can Help With",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000649876-what-the-brilliant-directories-support-team-can-help-with",
+          "relevance": 0.98
+        },
+        {
+          "title": "Don't Activate All Of The Post Types Prior To the Website Launch",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000636428-don-t-activate-all-of-the-post-types-prior-to-the-website-launch",
+          "relevance": 0.958
+        },
+        {
+          "title": "Troubleshooting: Member Search Result Issues Overview",
+          "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000660016-troubleshooting-member-search-result-issues-overview",
+          "relevance": 0.752
+        }
+      ],
+      "needs_human": false
+    },
+    "confirmed_feasible": false
+  },
+  "estimates": [
+    {
+      "task": "Clarification and technical investigation",
+      "low_hours": 2,
+      "likely_hours": 4,
+      "high_hours": 8,
+      "assumption": "Planning placeholder; confirm platform and requirements."
+    },
+    {
+      "task": "Implementation and integration",
+      "low_hours": 4,
+      "likely_hours": 10,
+      "high_hours": 20,
+      "assumption": "Provisional; depends on platform capability and agreed filters."
+    },
+    {
+      "task": "Testing and acceptance",
+      "low_hours": 2,
+      "likely_hours": 4,
+      "high_hours": 8,
+      "assumption": "Depends on agreed acceptance criteria and supported devices."
+    }
+  ],
+  "total_estimate": {
+    "low_hours": 8,
+    "likely_hours": 18,
+    "high_hours": 36,
+    "status": "provisional_not_a_commitment"
+  },
+  "scope": {
+    "objective": "Improve website search and mobile product discovery, subject to client confirmation and technical feasibility.",
+    "deliverables": [
+      "We need to improve website search and the mobile experience.",
+      "We want filters so customers can find products faster."
+    ],
+    "exclusions": [
+      "Unconfirmed features or filter fields",
+      "Platform changes not yet assessed",
+      "Any work not approved in the final scope"
+    ],
+    "assumptions": [
+      "Client requests are proposals, not approved requirements.",
+      "Technical feasibility has not been established.",
+      "Estimates are planning placeholders, not a delivery commitment."
+    ],
+    "open_questions": [
+      "Complete and review consultant action: We need to check what the existing platform supports and confirm the filter fields.",
+      "Agree with the client on: We should agree on acceptance criteria before confirming the timeline.",
+      "Confirm the scope of mobile improvements and target devices.",
+      "Confirm dependencies, budget, and desired delivery date."
+    ]
+  },
+  "baseline_changes": {
+    "added_or_new": [
+      "We need to improve website search and the mobile experience.",
+      "We want filters so customers can find products faster."
+    ],
+    "possibly_removed": [],
+    "note": "Text comparison only. A human must verify changes against the approved baseline before accepting any scope change."
+  },
+  "proposal_status": "DRAFT - HUMAN APPROVAL REQUIRED",
+  "approval_required": true,
+  "project_id": "demo-project"
+}
